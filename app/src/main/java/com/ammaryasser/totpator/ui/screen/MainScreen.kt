@@ -8,19 +8,22 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.foundation.lazy.staggeredgrid.items
+import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.Icons.Outlined
+import androidx.compose.material.icons.automirrored.filled.Send
 import androidx.compose.material.icons.outlined.Build
-import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.MoreVert
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme.colorScheme
@@ -193,6 +196,8 @@ fun MainScreenMenu(
             onClick = onNavToAboutScreen
         )
 
+        HorizontalDivider(Modifier.height(1.dp))
+
         val mailSubject = stringResource(R.string.x_feedback, stringResource(R.string.app_name))
 
         DropdownMenuItem(
@@ -200,7 +205,7 @@ fun MainScreenMenu(
                 Text(stringResource(R.string.x_feedback, stringResource(R.string.send)))
             },
             leadingIcon = {
-                Icon(Outlined.Email, stringResource(R.string.x_feedback))
+                Icon(Icons.AutoMirrored.Default.Send, stringResource(R.string.x_feedback))
             },
             onClick = {
                 Intent(Intent.ACTION_SENDTO).run {
