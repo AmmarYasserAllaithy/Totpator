@@ -1,3 +1,49 @@
 <resources>
-    <string name="app_name">Totpator</string>
+    <string name="app_name" translatable="false">Totpator</string>
+    <string name="app_about">A two-factor authentication app that generates Time-based One Time Passwords (TOTP) based on your shared secret key.</string>
+    <string name="copied">Copied</string>
+    <string name="search">Search</string>
+    <string name="preferences">Preferences</string>
+    <string name="about">About</string>
+    <string name="more">More</string>
+    <string name="switch_view">Switch view</string>
+    <string name="delete">Delete</string>
+    <string name="keep">Keep</string>
+    <string name="empty_list">Your list is empty!</string>
+    <string name="dialog_delete_title">Delete %s?</string>
+    <string name="dialog_delete_text">The account will be deleted permanently, and this process is UNRECOVERABLE!</string>
+    <string name="paste">Paste</string>
+    <string name="save">Save</string>
+    <string name="send">Send</string>
+    <string name="x_feedback">%s feedback</string>
+    <string name="add_account">Add account</string>
+    <string name="edit_account">Edit account</string>
+    <!-- Text Field -->
+    <string name="name">Name</string>
+    <string name="name_placeholder">Enter account name</string>
+    <string name="key">Secret key</string>
+    <string name="key_placeholder">Enter your shared secret key</string>
+    <string name="desc">Description (optional)</string>
+    <string name="desc_placeholder">Enter account description</string>
+    <!-- Preferences -->
+    <string name="app_theme">App theme</string>
+    <string name="tap_to_apply_theme">Tap to apply %s theme</string>
+    <string name="theme_light">light</string>
+    <string name="theme_dark">dark</string>
+    <string name="font_family">Font family</string>
+    <string name="tap_to_apply_font">Tap to apply %s font family</string>
+    <string name="family_poppins" translatable="false">poppins</string>
+    <string name="family_delius" translatable="false">delius</string>
+    <string name="display_lang">Display language</string>
+    <string name="tap_to_select_lang">Tap to select a language from the list</string>
+    <string name="coming_soon">Coming soon</string>
+    <string name="author_email" translatable="false">ammaryasserallaithy@gmail.com</string>
+    <string name="theme">Theme</string>
+    <string name="display">Display</string>
+    <string name="security">Security</string>
+    <string name="setup_pin_code">Setup PIN code</string>
+    <string name="lock_when_app_is_idle">Lock when app is idle</string>
+    <string name="after_minutes">After 3 minutes</string>
+    <string name="no_pin">You didn\'t set a PIN</string>
+
 </resources>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_about">تطبيق مصادقة ثنائي يعمل على إنشاء كلمات مرور تستخدام لمرة واحدة فقط (TOTP) بناءً على مفتاحك السري المشترك.</string>
+    <string name="copied">تم النسخ</string>
+    <string name="search">بحث</string>
+    <string name="preferences">تفضيلات</string>
+    <string name="about">عن التطبيق</string>
+    <string name="more">المزيد</string>
+    <string name="switch_view">تغيير طريقة العرض</string>
+    <string name="delete">حذف</string>
+    <string name="keep">تراجع</string>
+    <string name="empty_list">لم يتم اضافة اي حساب!</string>
+    <string name="dialog_delete_title">حذف %s؟</string>
+    <string name="dialog_delete_text">سيتم حذف الحساب نهائيا بلا نسخ احتياطية!</string>
+    <string name="paste">لصق</string>
+    <string name="save">حفظ</string>
+    <string name="send">ارسال</string>
+    <string name="x_feedback">%s رأيك</string>
+    <string name="add_account">اضافة حساب</string>
+    <string name="edit_account">تعديل حساب</string>
+    <!-- Text Field -->
+    <string name="name">الاسم</string>
+    <string name="name_placeholder">ادخل اسم الحساب</string>
+    <string name="key">المفتاح السري</string>
+    <string name="key_placeholder">ادخل المفتاح السري الخاص بك</string>
+    <string name="desc">الوصف (اختياري)</string>
+    <string name="desc_placeholder">ادخل وصف الحساب</string>
+    <!-- Preferences -->
+    <string name="app_theme">مظهر التطبيق</string>
+    <string name="tap_to_apply_theme">انقر لتطبيق المظهر %s</string>
+    <string name="theme_light">الفاتح</string>
+    <string name="theme_dark">الداكن</string>
+    <string name="font_family">نوع الخط</string>
+    <string name="tap_to_apply_font">انقر لتطبيق خط %s</string>
+    <string name="display_lang">لغة العرض</string>
+    <string name="tap_to_select_lang">انقر لاختيار اللغة المفضلة من القائمة</string>
+    <string name="coming_soon">قريبا</string>
+    <string name="theme">المظهر</string>
+    <string name="display">العرض</string>
+    <string name="security">الأمان</string>
+    <string name="setup_pin_code">تعيين رمز PIN</string>
+    <string name="lock_when_app_is_idle">قفل عند اغلاق التطبيق</string>
+    <string name="after_minutes">بعد 3 دقائق</string>
+    <string name="no_pin">لم تعين رمز PIN</string>
+
+</resources>
