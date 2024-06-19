@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.unit.dp
 import com.ammaryasser.totpator.R
+import com.ammaryasser.totpator.TotpatorApp
 import com.atlassian.onetime.core.TOTPGenerator
 import com.atlassian.onetime.model.TOTPSecret
 import java.util.concurrent.Executors

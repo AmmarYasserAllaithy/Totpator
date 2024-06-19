@@ -20,12 +20,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.ammaryasser.totpator.R
+import com.ammaryasser.totpator.TotpatorApp
 import com.ammaryasser.totpator.ui.component.Preference
 import com.ammaryasser.totpator.ui.component.TopBar
 import com.ammaryasser.totpator.ui.icon.Contrast
 import com.ammaryasser.totpator.ui.icon.Language
 import com.ammaryasser.totpator.ui.icon.TypeSpecimen
-import com.ammaryasser.totpator.util.TotpatorApp
 import com.ammaryasser.totpator.util.showToast
 
 

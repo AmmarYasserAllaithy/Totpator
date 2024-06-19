@@ -76,4 +76,6 @@ dependencies {
     implementation(libs.androidx.runtime.livedata)
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.onetime)
+    debugImplementation(libs.dbinspector)
+
 }
