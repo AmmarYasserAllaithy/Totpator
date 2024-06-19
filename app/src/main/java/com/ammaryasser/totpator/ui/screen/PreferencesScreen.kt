@@ -17,7 +17,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.ammaryasser.totpator.R
 import com.ammaryasser.totpator.TotpatorApp
@@ -146,9 +145,8 @@ fun SubTitle(text: String) {
 
     Text(
         text = text,
-        fontWeight = FontWeight.Bold,
         modifier = subtitleModifier,
-        color = colorScheme.onBackground
+        color = colorScheme.primary.copy(.9f)
     )
 }
 
