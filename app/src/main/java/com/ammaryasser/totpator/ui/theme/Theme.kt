@@ -1,6 +1,5 @@
 package com.ammaryasser.totpator.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -9,34 +8,42 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
+
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = YELLOW,
+    secondary = GREEN,
+    tertiary = BLUE,
+    background = BLACK,
+    surface = Color(0xFF383835),
+    // on
+    onPrimary = BLACK,
+    onSecondary = WHITE,
+    onTertiary = WHITE,
+    onBackground = WHITE,
+    onSurface = Color(250, 245, 240),
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
+    secondary = GREEN,
+    tertiary = Pink40,
     background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
+    surface = Color(0XFFF0F2F7),
+    // on
+    onPrimary = WHITE,
+    onSecondary = WHITE,
+    onTertiary = WHITE,
     onBackground = Color(0xFF1C1B1F),
     onSurface = Color(0xFF1C1B1F),
-    */
 )
 
 @Composable
 fun TotpatorTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
+    fontId: Int = 0,
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
@@ -52,7 +59,7 @@ fun TotpatorTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        typography = Typography.applyFontFamily(supportedFonts[fontId]),
         content = content
     )
 }
