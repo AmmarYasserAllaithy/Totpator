@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.outlined.Build
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
@@ -24,6 +23,7 @@ import com.ammaryasser.totpator.ui.component.Preference
 import com.ammaryasser.totpator.ui.component.TopBar
 import com.ammaryasser.totpator.ui.icon.Contrast
 import com.ammaryasser.totpator.ui.icon.Language
+import com.ammaryasser.totpator.ui.icon.Pin
 import com.ammaryasser.totpator.ui.icon.TypeSpecimen
 import com.ammaryasser.totpator.util.showToast
 
@@ -119,7 +119,7 @@ fun SecurityGroup() {
     SubTitle(stringResource(R.string.security))
 
     Preference(
-        icon = Icons.Outlined.Build,
+        icon = Pin(),
         title = (stringResource(R.string.setup_pin_code)),
         subTitle = (stringResource(R.string.no_pin)),
     ) {
