@@ -10,9 +10,10 @@ data class Account(
 
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0,
-    var name: String,
+    var issuer: String,
+    var username: String = "",
     var key: String,
-    var description: String = "",
+    var notes: String = "",
     var createdAt: Long = System.currentTimeMillis()
 
 ) : Serializable

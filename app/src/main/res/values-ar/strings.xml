@@ -18,12 +18,12 @@
     <string name="add_account">اضافة حساب</string>
     <string name="edit_account">تعديل حساب</string>
     <!-- Text Field -->
-    <string name="name">الاسم</string>
-    <string name="name_placeholder">ادخل اسم الحساب</string>
+    <!--    <string name="name">الاسم</string>-->
+    <!--    <string name="name_placeholder">ادخل اسم الحساب</string>-->
     <string name="key">المفتاح السري</string>
     <string name="key_placeholder">ادخل المفتاح السري الخاص بك</string>
-    <string name="desc">الوصف (اختياري)</string>
-    <string name="desc_placeholder">ادخل وصف الحساب</string>
+    <string name="notes_label">الملاحظات (اختياري)</string>
+    <string name="notes_placeholder">ادخل ملاحظات الحساب</string>
     <!-- Preferences -->
     <string name="app_theme">مظهر التطبيق</string>
     <string name="tap_to_apply_theme">انقر لتطبيق المظهر %s</string>
@@ -41,5 +41,9 @@
     <string name="lock_when_app_is_idle">قفل عند اغلاق التطبيق</string>
     <string name="after_minutes">بعد 3 دقائق</string>
     <string name="no_pin">لم تعين رمز PIN</string>
+    <string name="username_label">اسم المستخدم (اختياري)</string>
+    <string name="username_placeholder">ادخل اسم المستخدم او البريد الالكتروني</string>
+    <string name="issuer_label">المصدر</string>
+    <string name="issuer_placeholder">ادخل اسم المصدر</string>
 
 </resources>

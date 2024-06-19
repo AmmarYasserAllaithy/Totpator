@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons.Outlined
 import androidx.compose.material.icons.outlined.Check
 import androidx.compose.material.icons.outlined.Info
@@ -28,6 +30,7 @@ import com.ammaryasser.totpator.R
 import com.ammaryasser.totpator.data.account.Account
 import com.ammaryasser.totpator.ui.component.FormTextField
 import com.ammaryasser.totpator.ui.component.TopBar
+import com.ammaryasser.totpator.ui.icon.CorporateFare
 import com.ammaryasser.totpator.util.getClipboardManager
 import com.ammaryasser.totpator.util.showToast
 import com.ammaryasser.totpator.viewmodel.FormScreenViewModel
@@ -46,12 +49,11 @@ fun FormScreen(
             .background(colorScheme.background)
     ) {
 
-        var nameValue by remember { mutableStateOf("") }
+        var issuerValue by remember { mutableStateOf("") }
+        var usernameValue by remember { mutableStateOf("") }
         var keyValue by remember { mutableStateOf("") }
-        var descValue by remember { mutableStateOf("") }
-        var account by remember {
-            mutableStateOf(Account(name = "", key = "", description = ""))
-        }
+        var notesValue by remember { mutableStateOf("") }
+        var account by remember { mutableStateOf(Account(issuer = "", key = "")) }
 
         LaunchedEffect(Unit) {
             toBeEditedAccId?.run {
@@ -59,28 +61,31 @@ fun FormScreen(
                     vm.getAccountById(this).collect {
                         account = it
                         account.run {
-                            nameValue = name
+                            issuerValue = issuer
+                            usernameValue = username
                             keyValue = key
-                            descValue = description
+                            notesValue = notes
                         }
                     }
             }
         }
 
         FormScreenTopBar(onNavBack = onNavBack) {
-            nameValue = nameValue.trim()
+            issuerValue = issuerValue.trim()
+            usernameValue = usernameValue.trim()
             keyValue = keyValue.trim()
-            descValue = descValue.trim()
+            notesValue = notesValue.trim()
 
             when {
-                nameValue.isBlank() && keyValue.isBlank() -> showToast("Name and secret key are mandatory!")
-                nameValue.isBlank() -> showToast("Name is mandatory!")
+                issuerValue.isBlank() && keyValue.isBlank() -> showToast("Name and secret key are mandatory!")
+                issuerValue.isBlank() -> showToast("Name is mandatory!")
                 keyValue.isBlank() -> showToast("Your secret key is mandatory!")
                 else -> {
                     account.apply {
-                        name = nameValue
+                        issuer = issuerValue
+                        username = usernameValue
                         key = keyValue
-                        description = descValue
+                        notes = notesValue
                     }
 
                     vm.saveAccount(account)
@@ -93,16 +98,25 @@ fun FormScreen(
         Column(
             modifier = Modifier
                 .fillMaxWidth()
+                .verticalScroll(rememberScrollState())
                 .padding(24.dp),
             verticalArrangement = Arrangement.spacedBy(24.dp),
         ) {
 
             FormTextField(
+                CorporateFare(),
+                stringResource(R.string.issuer_label),
+                stringResource(R.string.issuer_placeholder),
+                issuerValue,
+            ) { issuerValue = it }
+
+            FormTextField(
                 Outlined.Person,
-                R.string.name,
-                R.string.name_placeholder,
-                nameValue,
-            ) { nameValue = it }
+                stringResource(R.string.username_label),
+                stringResource(R.string.username_placeholder),
+                usernameValue,
+                optional = true
+            ) { usernameValue = it }
 
             FormTextField(
                 Outlined.Lock,
@@ -120,11 +134,11 @@ fun FormScreen(
 
             FormTextField(
                 Outlined.Info,
-                R.string.desc,
-                R.string.desc_placeholder,
-                descValue,
+                R.string.notes_label,
+                R.string.notes_placeholder,
+                notesValue,
                 optional = true
-            ) { descValue = it }
+            ) { notesValue = it }
 
         }
 

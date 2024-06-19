@@ -19,12 +19,12 @@
     <string name="add_account">Add account</string>
     <string name="edit_account">Edit account</string>
     <!-- Text Field -->
-    <string name="name">Name</string>
-    <string name="name_placeholder">Enter account name</string>
+    <!--    <string name="name">Name</string>-->
+    <!--    <string name="name_placeholder">Enter account name</string>-->
     <string name="key">Secret key</string>
     <string name="key_placeholder">Enter your shared secret key</string>
-    <string name="desc">Description (optional)</string>
-    <string name="desc_placeholder">Enter account description</string>
+    <string name="notes_label">Notes (optional)</string>
+    <string name="notes_placeholder">Enter notes</string>
     <!-- Preferences -->
     <string name="app_theme">App theme</string>
     <string name="tap_to_apply_theme">Tap to apply %s theme</string>
@@ -45,5 +45,9 @@
     <string name="lock_when_app_is_idle">Lock when app is idle</string>
     <string name="after_minutes">After 3 minutes</string>
     <string name="no_pin">You didn\'t set a PIN</string>
+    <string name="username_label">Username (optional)</string>
+    <string name="username_placeholder">Enter username or Email</string>
+    <string name="issuer_label">Issuer</string>
+    <string name="issuer_placeholder">Enter your key issuer</string>
 
 </resources>

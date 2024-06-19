@@ -46,9 +46,10 @@ import com.ammaryasser.totpator.util.schedule
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SwipeCard(
-    name: String,
+    issuer: String,
+    username: String,
     totp: String,
-    description: String,
+    notes: String,
     duration: Float = 30f,
     onTotpExpire: () -> Unit,
     onSwipeToStart: () -> Unit,
@@ -128,7 +129,9 @@ fun SwipeCard(
                     .padding(vertical = 8.dp, horizontal = 10.dp),
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
-                CardText(name, typography.titleSmall, colorScheme.primary)
+                CardText(issuer, typography.titleSmall, colorScheme.primary)
+
+                if (username.isNotBlank()) CardText(username, typography.bodySmall, maxLines = 2)
 
                 Row(
                     modifier = Modifier.fillMaxWidth(),
@@ -144,8 +147,7 @@ fun SwipeCard(
                     CounterDown(duration, colorScheme.primary, onTotpExpire)
                 }
 
-                if (description.isNotBlank())
-                    CardText(description, typography.bodySmall, maxLines = 2)
+                if (notes.isNotBlank()) CardText(notes, typography.bodySmall, maxLines = 2)
             }
         }
 

@@ -208,6 +208,7 @@ fun MainScreenMenu(
                 Icon(Icons.AutoMirrored.Default.Send, stringResource(R.string.x_feedback))
             },
             onClick = {
+                onDismiss()
                 Intent(Intent.ACTION_SENDTO).run {
                     data = Uri.parse("mailto:")
 
@@ -270,9 +271,10 @@ fun AccountsGrid(
             updateTotp()
 
             SwipeCard(
-                name = account.name,
+                issuer = account.issuer,
+                username = account.username,
                 totp = totp,
-                description = account.description,
+                notes = account.notes,
                 onTotpExpire = updateTotp,
                 onSwipeToStart = {
                     showDialog = true
@@ -287,7 +289,7 @@ fun AccountsGrid(
 
             if (showDialog) {
                 ConfirmationDialog(
-                    title = stringResource(R.string.dialog_delete_title, account.name),
+                    title = stringResource(R.string.dialog_delete_title, account.issuer),
                     text = stringResource(R.string.dialog_delete_text),
                     confirmText = stringResource(R.string.delete),
                     dismissText = stringResource(R.string.keep),
