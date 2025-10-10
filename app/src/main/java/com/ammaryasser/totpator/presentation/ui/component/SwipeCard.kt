@@ -87,7 +87,7 @@ fun SwipeCard(
                     when (dismissState.targetValue) {
                         EndToStart -> Color.Red.copy(alpha = 0.8f)
                         StartToEnd -> colorScheme.secondary.copy(alpha = 0.8f)
-                        else -> colorScheme.background
+                        else -> colorScheme.primary
                     }
                 )
 

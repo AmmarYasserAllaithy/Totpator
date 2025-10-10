@@ -27,11 +27,11 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+    primary = Color(0xFF165890),
     secondary = GREEN,
     tertiary = Pink40,
     background = Color(0xFFFFFBFE),
-    surface = Color(0XFFF0F2F7),
+    surface = Color(0xFFF3F3F6),
     // on
     onPrimary = WHITE,
     onSecondary = WHITE,
@@ -44,7 +44,7 @@ private val LightColorScheme = lightColorScheme(
 fun TotpatorTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     fontId: Int = 0,
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
