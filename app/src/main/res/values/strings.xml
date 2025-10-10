@@ -31,9 +31,9 @@
     <string name="theme_light">light</string>
     <string name="theme_dark">dark</string>
     <string name="font_family">Font family</string>
-    <string name="tap_to_apply_font">Tap to apply %s font family</string>
-    <string name="family_poppins" translatable="false">poppins</string>
-    <string name="family_delius" translatable="false">delius</string>
+    <string name="tap_to_apply_font">%s - Tap to change</string>
+    <string name="family_poppins" translatable="false">Poppins</string>
+    <string name="family_delius" translatable="false">Delius</string>
     <string name="display_lang">Display language</string>
     <string name="tap_to_select_lang">Tap to select a language from the list</string>
     <string name="coming_soon">Coming soon</string>
