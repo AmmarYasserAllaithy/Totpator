@@ -10,7 +10,6 @@ import com.ammaryasser.totpator.presentation.ui.screen.AboutScreen
 import com.ammaryasser.totpator.presentation.ui.screen.FormScreen
 import com.ammaryasser.totpator.presentation.ui.screen.MainScreen
 import com.ammaryasser.totpator.presentation.ui.screen.PreferencesScreen
-import com.ammaryasser.totpator.navigation.Screen
 
 
 @Composable
