@@ -1,7 +1,6 @@
 package com.ammaryasser.totpator.presentation.ui.screen
 
 import android.content.Intent
-import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -41,6 +40,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
+import androidx.core.net.toUri
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ammaryasser.totpator.R
 import com.ammaryasser.totpator.data.models.Account
@@ -51,10 +51,10 @@ import com.ammaryasser.totpator.presentation.ui.component.SwipeCard
 import com.ammaryasser.totpator.presentation.ui.component.TopBar
 import com.ammaryasser.totpator.presentation.ui.icon.GridView
 import com.ammaryasser.totpator.presentation.ui.icon.ViewAgenda
+import com.ammaryasser.totpator.presentation.viewmodels.MainScreenViewModel
 import com.ammaryasser.totpator.util.copyText
 import com.ammaryasser.totpator.util.generateTotp
 import com.ammaryasser.totpator.util.getClipboardManager
-import com.ammaryasser.totpator.presentation.viewmodels.MainScreenViewModel
 import kotlinx.coroutines.launch
 
 
@@ -68,6 +68,7 @@ fun MainScreen(
     onNavToPreferencesScreen: () -> Unit,
     onNavToAboutScreen: () -> Unit,
 ) {
+
     vm = viewModel(factory = MainScreenViewModel.Factory)
 
     Box(
@@ -210,7 +211,7 @@ fun MainScreenMenu(
             onClick = {
                 onDismiss()
                 Intent(Intent.ACTION_SENDTO).run {
-                    data = Uri.parse("mailto:")
+                    data = "mailto:".toUri()
 
                     putExtra(Intent.EXTRA_EMAIL, arrayOf(ctx.getString(R.string.author_email)))
                     putExtra(Intent.EXTRA_SUBJECT, mailSubject)
@@ -252,8 +253,8 @@ fun AccountsGrid(
 ) {
     LazyVerticalStaggeredGrid(
         columns =
-        if (viewAsGrid) StaggeredGridCells.Adaptive(minSize = 155.dp)
-        else StaggeredGridCells.Fixed(1),
+            if (viewAsGrid) StaggeredGridCells.Adaptive(minSize = 155.dp)
+            else StaggeredGridCells.Fixed(1),
         modifier = modifier,
         contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 88.dp),
         verticalItemSpacing = 16.dp,

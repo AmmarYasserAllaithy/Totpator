@@ -14,8 +14,8 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.compose.rememberNavController
-import com.ammaryasser.totpator.navigation.NavGraph
 import com.ammaryasser.totpator.data.repos.PrefsRepo
+import com.ammaryasser.totpator.navigation.NavGraph
 import com.ammaryasser.totpator.presentation.ui.theme.TotpatorTheme
 import kotlinx.coroutines.launch
 
